@@ -36,7 +36,7 @@ impl Component for ProductCard {
         html! {
             <div class="product_card_container">
                 <Anchor route=Route::ProductDetail(self.props.product.id) classes="product_card_anchor">
-                    <img class="product_card_image" src={&self.props.product.image}/>
+                    <img class="product_card_image" src={self.props.product.image.clone()}/>
                     <div class="product_card_name">{&self.props.product.name}</div>
                     <div class="product_card_price">{"$"}{&self.props.product.price}</div>
                 </Anchor>

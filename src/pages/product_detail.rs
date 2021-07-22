@@ -87,7 +87,7 @@ impl Component for ProductDetail {
         if let Some(ref product) = self.state.product {
             html! {
                 <div class="product_detail_container">
-                    <img class="product_detail_image" src={&product.image}/>
+                    <img class="product_detail_image" src={product.image.clone()}/>
                     <div class="product_card_name">{&product.name}</div>
                     <div style="margin: 10px 0; line-height: 24px;">{&product.description}</div>
                     <div class="product_card_price">{"$"}{&product.price}</div>

@@ -94,7 +94,7 @@ impl Component for Home {
             .iter()
             .map(|product: &Product| {
                 html! {
-                  <ProductCard product={product} on_add_to_cart=self.props.on_add_to_cart.clone()/>
+                  <ProductCard product={product.clone()} on_add_to_cart=self.props.on_add_to_cart.clone()/>
                 }
             })
             .collect();
